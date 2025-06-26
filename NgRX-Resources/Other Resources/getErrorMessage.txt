@@ -1,0 +1,24 @@
+
+    getErrorMessage(errorResponse: HttpErrorResponse){
+        let message = 'An unknown error has occured.';
+
+        if(errorResponse.error || !errorResponse.error.error){
+            return message;
+        }
+
+        switch(errorResponse.error.error.message){
+            case 'EMAIL_NOT_FOUND':
+                message = 'This email does not exist.';
+                break;
+            case 'INVALID_PASSWORD':
+                message = 'This password is not correct.';
+                break;
+            case 'USER_DISABLED':
+                message = 'This user has been disabled.';
+                break;
+            default:
+                message = errorResponse.error.error.message;
+                break;
+        }
+        return message;
+    }
