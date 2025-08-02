@@ -1,0 +1,57 @@
+/* ** course-detail.component.css ** */
+.app-course-back{
+    margin: 20px auto;
+    width: 1000px;
+}
+button{
+    border: none;
+    padding: 15px 20px;
+    color: white;
+    background-color: deeppink;
+    font-weight: bold;
+}
+.app-course-detail{
+    width: 1000px;
+    margin: 20px auto;
+    border: #dedede 1px solid;
+}
+.app-course-title{
+    padding: 15px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.app-course-author-price{
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: #dedede 1px solid;
+    display: flex;
+}
+.app-course-author{
+    width: 50%;
+    padding: 15px 20px;
+    border-right: #dedede 0.5px solid;
+}
+.app-course-price{
+    width: 50%;
+    padding: 15px 20px;
+    text-align: right;
+    border-left: #dedede 0.5px solid;
+}
+.app-course-description{
+    /* border: #dedede 0.5px solid; */
+    padding: 15px 20px;
+}
+.app-course-lessions{
+    border-top: #dedede 0.5px solid;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #424949;
+}
+.app-no-course{
+    border: #cdcdcd 1.5px solid;
+    margin: 30px 100px;
+    padding: 30px 100px;
+    text-align: center;
+}

@@ -1,0 +1,43 @@
+<div *ngIf="!(selectedCourse$ | async)" class="app-no-course">
+    <h2>Cannot Show Course Details for the Selected Course</h2>
+</div>
+
+<div *ngIf="(selectedCourse$ | async)">
+    <div class="app-course-back">
+        <button (click)="OnBackToCourses()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            Back to Courses
+        </button>
+    </div>
+    <div class="app-course-detail">
+        <div class="app-course-title">
+            {{ (selectedCourse$ | async).title }}
+        </div>
+        <div>
+            <img [src]="(selectedCourse$ | async).image" width="100%" height="350px">
+        </div>
+        <div class="app-course-author-price">
+            <div class="app-course-author">{{ (selectedCourse$ | async).author }}</div>
+            <div class="app-course-price">${{ (selectedCourse$ | async).price }}</div>
+        </div>
+        <div class="app-course-description">
+            {{ (selectedCourse$ | async).description }}
+        </div>
+        <div class="app-course-lessions">
+            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+            <span>Lession 1: Introduction to Course</span>
+        </div>
+        <div class="app-course-lessions">
+            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+            <span>Lession 2: How to navigate this Course</span>
+        </div>
+        <div class="app-course-lessions">
+            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+            <span>Lession 3: Project Setup & Code Editor</span>
+        </div>
+        <div class="app-course-lessions">
+            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+            <span>Lession 4: The "Hello, World" Project</span>
+        </div>
+    </div>
+</div>
